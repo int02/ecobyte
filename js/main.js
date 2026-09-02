@@ -1,3 +1,40 @@
+function toggleTheme() {
+    var html = document.documentElement;
+    var currentTheme = html.getAttribute('data-theme') || 'light';
+    var newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateFavicon(newTheme);
+}
+
+function updateFavicon(theme) {
+    var favicon = document.getElementById('favicon');
+    if (!favicon) return;
+    var canvas = document.createElement('canvas');
+    canvas.width = 64;
+    canvas.height = 64;
+    var ctx = canvas.getContext('2d');
+    var bgColor = theme === 'dark' ? '#4ade80' : '#1b4332';
+    var img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = function() {
+        ctx.fillStyle = bgColor;
+        if (ctx.roundRect) {
+            ctx.beginPath();
+            ctx.roundRect(0, 0, 64, 64, 12);
+            ctx.fill();
+        } else {
+            ctx.fillRect(0, 0, 64, 64);
+        }
+        ctx.drawImage(img, 8, 8, 48, 48);
+        try {
+            favicon.href = canvas.toDataURL('image/png');
+        } catch (e) {}
+    };
+    img.onerror = function() {};
+    img.src = 'img/ecobytevertical.png';
+}
+
 (function ($) {
     "use strict";
 
@@ -81,6 +118,16 @@
         return false;
     });
 
+    // System theme change listener
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            if (!localStorage.getItem('theme')) {
+                var newTheme = e.matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                updateFavicon(newTheme);
+            }
+        });
+    }
 
 })(jQuery);
 

@@ -3,11 +3,19 @@
 
     <head>
         <meta charset="utf-8">
-        <title>EcoByte | Events</title>
+        <title>EcoByte | Green ICT Events, Workshops &amp; Community Drives</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
-        <link rel="icon" href="img/ecobytevertical.png" type="image/png">
+        <meta content="EcoByte events, Green ICT workshop Davao, e-waste collection drive, digital privacy seminar, youth tech conference, Philippines sustainability events" name="keywords">
+        <meta content="Join EcoByte community events: sustainable tech workshops, Earth Day e-waste drives, privacy seminars, and youth Green ICT leadership conferences across Davao and Mindanao." name="description">
+        <link rel="icon" id="favicon" href="img/ecobytevertical.png" type="image/png">
+        <script>
+            (function() {
+                var savedTheme = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            })();
+        </script>
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,8 +54,8 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-8">
                             <div class="topbar-info d-flex flex-wrap">
-                                <a href="#" class="text-light me-4"><i class="fas fa-envelope text-white me-2"></i>events@ecobyte.com</a>
-                                <a href="#" class="text-light"><i class="fas fa-phone-alt text-white me-2"></i>+63 939 267 1159</a>
+                                <a href="mailto:info@ecobyte.com" class="text-light me-4"><i class="fas fa-envelope text-white me-2"></i>info@ecobyte.com</a>
+                                <a href="tel:+639392671159" class="text-light"><i class="fas fa-phone-alt text-white me-2"></i>+63 939 267 1159</a>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -61,14 +69,16 @@
                         </div>
                     </div>
                 </div>
-                <nav class="navbar navbar-light bg-light navbar-expand-xl">
+                <nav class="navbar navbar-light navbar-expand-xl">
                     <a href="index.html" class="navbar-brand ms-3">
-                        <img src="img/ecobytehorizontal.png" alt="EcoByte Logo" class="img-fluid" style="max-height: 54px; width: auto;">
+                        <span class="navbar-brand-logo-wrapper">
+                            <img src="img/ecobytehorizontal.png" alt="EcoByte Logo" class="img-fluid logo-img">
+                        </span>
                     </a>
                     <button class="navbar-toggler py-2 px-3 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>
-                    <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto">
                             <a href="index.html" class="nav-item nav-link">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
@@ -82,12 +92,16 @@
                                     <a href="gallery.html" class="dropdown-item">Gallery</a>
                                     <a href="volunteer.html" class="dropdown-item">Volunteers</a>
                                     <a href="donation.html" class="dropdown-item">Donation</a>
-
+                                    <a href="404.html" class="dropdown-item">404 Error</a>
                                 </div>
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="d-flex align-items-center flex-nowrap pt-xl-0" style="margin-left: 15px;">
+                            <button class="theme-toggle-btn" type="button" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                            </button>
                             <a href="contact.html" class="btn-hover-bg btn btn-primary text-white py-2 px-4 me-3">Support the Cause</a>
                         </div>
                     </div>
@@ -114,56 +128,56 @@
         <div class="container-fluid event py-5">
             <div class="container py-5">
                 <div class="text-center mx-auto mb-5" style="max-width: 800px;">
-                    <h5 class="text-uppercase text-primary">Upcoming Events</h5>
-                    <h1 class="mb-0">Join us for workshops, drives, and seminars that promote sustainable technology and digital responsibility.</h1>
+                    <h5 class="text-uppercase text-primary">Calendar of Action</h5>
+                    <h1 class="mb-0">Community Workshops, Collection Drives &amp; Advocacy Summits Open to All Filipinos</h1>
                 </div>
                 <div class="event-carousel owl-carousel">
                     <div class="event-item">
-                        <img src="img/events-1.jpg" class="img-fluid w-100" alt="Image">
+                        <img src="img/events-1.jpg" class="img-fluid w-100" alt="Sustainable Tech Workshop">
                         <div class="event-content p-4">
                             <div class="d-flex justify-content-between mb-4">
-                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Davao Convention Center, Davao City</span>
+                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Matina Barangay Hall, Davao City</span>
                                 <span class="text-body"><i class="fas fa-calendar-alt me-2"></i>15 Mar, 2025</span>
                             </div>
-                            <h4 class="mb-4">Sustainable Tech Workshop for Beginners</h4>
-                            <p class="mb-4">Learn practical skills to reduce your digital carbon footprint and adopt energy-efficient technology habits in daily life.</p>
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                            <h4 class="mb-4">Sustainable Tech Workshop for Families</h4>
+                            <p class="mb-4">A 3-hour Saturday session teaching parents and high schoolers how to reduce streaming data costs, configure automatic power-saving modes, cut e-charging waste by 40%, and spot misinformation online.</p>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="contact.html">Event Details</a>
                         </div>
                     </div>
                     <div class="event-item">
-                        <img src="img/events-2.jpg" class="img-fluid w-100" alt="Image">
+                        <img src="img/events-2.jpg" class="img-fluid w-100" alt="E-Waste Recycling Drive">
                         <div class="event-content p-4">
                             <div class="d-flex justify-content-between mb-4">
-                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Davao Convention Center, Davao City</span>
+                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Gaisano Mall Parking Lot, Davao</span>
                                 <span class="text-body"><i class="fas fa-calendar-alt me-2"></i>22 Apr, 2025</span>
                             </div>
-                            <h4 class="mb-4">E-Waste Recycling Community Drive</h4>
-                            <p class="mb-4">Bring your old electronics for responsible recycling and learn how proper e-waste management protects our environment.</p>
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                            <h4 class="mb-4">Earth Day E-Waste Collection Drive</h4>
+                            <p class="mb-4">Bring your old phones, laptops, and dead batteries for free DENR-certified disposal. First 100 donors get a reusable EcoByte tote bag and a home energy-checklist poster. Corporate bulk drop-offs welcome.</p>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="contact.html">Event Details</a>
                         </div>
                     </div>
                     <div class="event-item">
-                        <img src="img/events-3.jpg" class="img-fluid w-100" alt="Image">
+                        <img src="img/events-3.jpg" class="img-fluid w-100" alt="Digital Privacy Seminar">
                         <div class="event-content p-4">
                             <div class="d-flex justify-content-between mb-4">
-                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Davao Convention Center, Davao City</span>
+                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>SPEDA Building, Davao City</span>
                                 <span class="text-body"><i class="fas fa-calendar-alt me-2"></i>10 May, 2025</span>
                             </div>
-                            <h4 class="mb-4">Digital Privacy & Security Seminar</h4>
-                            <p class="mb-4">Discover how to protect your personal data, practice safer browsing, and understand the environmental impact of data storage.</p>
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                            <h4 class="mb-4">Digital Privacy &amp; Data Minimalism Seminar</h4>
+                            <p class="mb-4">Learn to audit app permissions, set up two-factor authentication, reduce your cloud storage footprint, and understand how the Data Privacy Act of 2012 protects your children's school-issued Google accounts.</p>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="contact.html">Event Details</a>
                         </div>
                     </div>
                     <div class="event-item">
-                        <img src="img/events-4.jpg" class="img-fluid w-100" alt="Image">
+                        <img src="img/events-4.jpg" class="img-fluid w-100" alt="Youth Green ICT Leadership Conference">
                         <div class="event-content p-4">
                             <div class="d-flex justify-content-between mb-4">
-                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Davao Convention Center, Davao City</span>
+                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>University of Mindanao Auditorium</span>
                                 <span class="text-body"><i class="fas fa-calendar-alt me-2"></i>28 Jun, 2025</span>
                             </div>
                             <h4 class="mb-4">Youth Green ICT Leadership Conference</h4>
-                            <p class="mb-4">Empowering young leaders to champion sustainable technology practices and drive digital responsibility in their communities.</p>
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                            <p class="mb-4">A full-day summit for SHS and college students featuring a digital-carbon hackathon, youth-led barangay campaign pitches, and an open forum with NPC and DENR representatives. Certificates and seed grants awarded.</p>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="contact.html">Event Details</a>
                         </div>
                     </div>
                 </div>
@@ -189,23 +203,23 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Our Services</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Digital Education Programs</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Device Recycling & E-Waste Management</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Energy-Efficient Technology Advocacy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Online Privacy & Data Protection</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Digital Wellness Initiatives</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Sustainable Computing Workshops</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Digital Education Programs</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Device Recycling &amp; E-Waste Management</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Energy-Efficient Technology Advocacy</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Online Privacy &amp; Data Protection</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Digital Wellness Initiatives</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Sustainable Computing Workshops</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Volunteer</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Ethan Torrejas</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Lee Ilagan</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Ivan Pamarato</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Haizarr Samparani</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> </a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> </a>
+                            <h4 class="mb-4 text-white">Quick Links</h4>
+                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> About EcoByte</a>
+                            <a href="causes.html"><i class="fas fa-angle-right me-2"></i> Our Active Causes</a>
+                            <a href="events.html"><i class="fas fa-angle-right me-2"></i> Community Events</a>
+                            <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Green ICT Blog</a>
+                            <a href="volunteer.html"><i class="fas fa-angle-right me-2"></i> Become a Volunteer</a>
+                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Our Team</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">

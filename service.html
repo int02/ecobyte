@@ -3,11 +3,19 @@
 
     <head>
         <meta charset="utf-8">
-        <title>EcoByte | Services</title>
+        <title>EcoByte | Green ICT Services &amp; Responsible Internet Programs</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
-        <link rel="icon" href="img/ecobytevertical.png" type="image/png">
+        <meta content="Green ICT services, digital education Philippines, e-waste recycling Davao, energy efficient technology, online privacy workshop, data protection Philippines, sustainable computing" name="keywords">
+        <meta content="EcoByte delivers four pillars of Green ICT service: digital citizenship workshops, certified e-waste collection, energy-saving audits, and data privacy training for schools, barangays, and businesses across Mindanao." name="description">
+        <link rel="icon" id="favicon" href="img/ecobytevertical.png" type="image/png">
+        <script>
+            (function() {
+                var savedTheme = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            })();
+        </script>
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,8 +54,8 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-8">
                             <div class="topbar-info d-flex flex-wrap">
-                                <a href="#" class="text-light me-4"><i class="fas fa-envelope text-white me-2"></i>info@ecobyte.com</a>
-                                <a href="#" class="text-light"><i class="fas fa-phone-alt text-white me-2"></i>+63 939 267 1159</a>
+                                <a href="mailto:info@ecobyte.com" class="text-light me-4"><i class="fas fa-envelope text-white me-2"></i>info@ecobyte.com</a>
+                                <a href="tel:+639392671159" class="text-light"><i class="fas fa-phone-alt text-white me-2"></i>+63 939 267 1159</a>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -61,14 +69,16 @@
                         </div>
                     </div>
                 </div>
-                <nav class="navbar navbar-light bg-light navbar-expand-xl">
+                <nav class="navbar navbar-light navbar-expand-xl">
                     <a href="index.html" class="navbar-brand ms-3">
-                        <img src="img/ecobytehorizontal.png" alt="EcoByte Logo" class="img-fluid" style="max-height: 54px; width: auto;">
+                        <span class="navbar-brand-logo-wrapper">
+                            <img src="img/ecobytehorizontal.png" alt="EcoByte Logo" class="img-fluid logo-img">
+                        </span>
                     </a>
                     <button class="navbar-toggler py-2 px-3 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>
-                    <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto">
                             <a href="index.html" class="nav-item nav-link">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
@@ -82,12 +92,16 @@
                                     <a href="gallery.html" class="dropdown-item">Gallery</a>
                                     <a href="volunteer.html" class="dropdown-item">Volunteers</a>
                                     <a href="donation.html" class="dropdown-item">Donation</a>
-
+                                    <a href="404.html" class="dropdown-item">404 Error</a>
                                 </div>
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="d-flex align-items-center flex-nowrap pt-xl-0" style="margin-left: 15px;">
+                            <button class="theme-toggle-btn" type="button" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                            </button>
                             <a href="contact.html" class="btn-hover-bg btn btn-primary text-white py-2 px-4 me-3">Support the Cause</a>
                         </div>
                     </div>
@@ -114,49 +128,49 @@
         <div class="container-fluid service py-5 bg-light">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                    <h5 class="text-uppercase text-primary">What we do</h5>
-                    <h1 class="mb-0">How we support Green ICT & Careful Use Of Internet</h1>
+                    <h5 class="text-uppercase text-primary">What We Do</h5>
+                    <h1 class="mb-0">Four Pillars of Green ICT &amp; Responsible Internet Use</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="service-item">
-                            <img src="img/service-1.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/service-1.jpg" class="img-fluid w-100" alt="Digital Education Programs">
                             <div class="service-link">
-                                <a href="#" class="h4 mb-0">Digital Education Programs</a>
+                                <a href="service.html" class="h4 mb-0">Digital Education Programs</a>
                             </div>
                         </div>
-                        <p class="my-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                        <p class="my-4">Hands-on workshops, classroom modules, and community learning sessions that teach sustainable technology practices, critical digital citizenship, and eco-conscious computing from barangay halls to university campuses.</p>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="service-item">
-                            <img src="img/service-2.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/service-2.jpg" class="img-fluid w-100" alt="Device Recycling &amp; E-Waste Management">
                             <div class="service-link">
-                                <a href="#" class="h4 mb-0">Device Recycling & E-Waste Management</a>
+                                <a href="service.html" class="h4 mb-0">Device Recycling &amp; E-Waste Management</a>
                             </div>
                         </div>
-                        <p class="my-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                        <p class="my-4">Certified collection drives, partnerships with DENR-accredited recyclers, and community refurbishment hubs that keep phones, laptops, and batteries out of open dumps — recovering materials and extending device lifespans.</p>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="service-item">
-                            <img src="img/service-3.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/service-3.jpg" class="img-fluid w-100" alt="Energy-Efficient Technology Advocacy">
                             <div class="service-link">
-                                <a href="#" class="h4 mb-0">Energy-Efficient Technology Advocacy</a>
+                                <a href="service.html" class="h4 mb-0">Energy-Efficient Technology Advocacy</a>
                             </div>
                         </div>
-                        <p class="my-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                        <p class="my-4">Energy audits for schools and offices, ENERGY STAR device guidance, power-management toolkits, and policy recommendations that slash kilowatt-hour use and lower the carbon footprint of digital infrastructure.</p>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="service-item">
-                            <img src="img/service-4.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/service-4.jpg" class="img-fluid w-100" alt="Online Privacy &amp; Data Protection">
                             <div class="service-link">
-                                <a href="#" class="h4 mb-0">Online Privacy & Data Protection</a>
+                                <a href="service.html" class="h4 mb-0">Online Privacy &amp; Data Protection</a>
                             </div>
                         </div>
-                        <p class="my-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                        <p class="my-4">Free privacy audits, Data Privacy Act (DPA) briefings, password-safety campaigns, and guides to minimizing digital traces — because responsible internet use protects both the planet and the people on it.</p>
                     </div>
                     <div class="col-12">
                         <div class="d-flex align-items-center justify-content-center">
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="contact.html">Request a Program</a>
                         </div>
                     </div>
                 </div>
@@ -182,23 +196,23 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Our Services</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Digital Education Programs</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Device Recycling & E-Waste Management</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Energy-Efficient Technology Advocacy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Online Privacy & Data Protection</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Digital Wellness Initiatives</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Sustainable Computing Workshops</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Digital Education Programs</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Device Recycling &amp; E-Waste Management</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Energy-Efficient Technology Advocacy</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Online Privacy &amp; Data Protection</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Digital Wellness Initiatives</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Sustainable Computing Workshops</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Volunteer</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Ethan Torrejas</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Lee Ilagan</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Ivan Pamarato</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Haizarr Samparani</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> </a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> </a>
+                            <h4 class="mb-4 text-white">Quick Links</h4>
+                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> About EcoByte</a>
+                            <a href="causes.html"><i class="fas fa-angle-right me-2"></i> Our Active Causes</a>
+                            <a href="events.html"><i class="fas fa-angle-right me-2"></i> Community Events</a>
+                            <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Green ICT Blog</a>
+                            <a href="volunteer.html"><i class="fas fa-angle-right me-2"></i> Become a Volunteer</a>
+                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Our Team</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">

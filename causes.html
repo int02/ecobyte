@@ -3,11 +3,19 @@
 
     <head>
         <meta charset="utf-8">
-        <title>EcoByte | Causes</title>
+        <title>EcoByte | Active Green ICT Causes &amp; Fundraising Campaigns</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
-        <link rel="icon" href="img/ecobytevertical.png" type="image/png">
+        <meta content="Green ICT causes, e-waste fundraiser Philippines, digital literacy campaign, privacy awareness, EcoByte donation, device refurbishment fund, e-waste collection hub" name="keywords">
+        <meta content="Support EcoByte's four active causes: device refurbishment labs, IP community digital literacy buses, barangay e-waste hubs, and data privacy awareness billboards. Every peso is matched by local partners." name="description">
+        <link rel="icon" id="favicon" href="img/ecobytevertical.png" type="image/png">
+        <script>
+            (function() {
+                var savedTheme = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            })();
+        </script>
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,8 +54,8 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-8">
                             <div class="topbar-info d-flex flex-wrap">
-                                <a href="#" class="text-light me-4"><i class="fas fa-envelope text-white me-2"></i>support@ecobyte.com</a>
-                                <a href="#" class="text-light"><i class="fas fa-phone-alt text-white me-2"></i>+63 939 267 1159</a>
+                                <a href="mailto:info@ecobyte.com" class="text-light me-4"><i class="fas fa-envelope text-white me-2"></i>info@ecobyte.com</a>
+                                <a href="tel:+639392671159" class="text-light"><i class="fas fa-phone-alt text-white me-2"></i>+63 939 267 1159</a>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -61,14 +69,16 @@
                         </div>
                     </div>
                 </div>
-                <nav class="navbar navbar-light bg-light navbar-expand-xl">
+                <nav class="navbar navbar-light navbar-expand-xl">
                     <a href="index.html" class="navbar-brand ms-3">
-                        <img src="img/ecobytehorizontal.png" alt="EcoByte Logo" class="img-fluid" style="max-height: 54px; width: auto;">
+                        <span class="navbar-brand-logo-wrapper">
+                            <img src="img/ecobytehorizontal.png" alt="EcoByte Logo" class="img-fluid logo-img">
+                        </span>
                     </a>
                     <button class="navbar-toggler py-2 px-3 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>
-                    <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto">
                             <a href="index.html" class="nav-item nav-link">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
@@ -82,12 +92,16 @@
                                     <a href="gallery.html" class="dropdown-item">Gallery</a>
                                     <a href="volunteer.html" class="dropdown-item">Volunteers</a>
                                     <a href="donation.html" class="dropdown-item">Donation</a>
-
+                                    <a href="404.html" class="dropdown-item">404 Error</a>
                                 </div>
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="d-flex align-items-center flex-nowrap pt-xl-0" style="margin-left: 15px;">
+                            <button class="theme-toggle-btn" type="button" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                            </button>
                             <a href="contact.html" class="btn-hover-bg btn btn-primary text-white py-2 px-4 me-3">Support the Cause</a>
                         </div>
                     </div>
@@ -114,21 +128,21 @@
         <div class="container-fluid causes py-5">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                    <h5 class="text-uppercase text-primary">Recent Causes</h5>
-                    <h1 class="mb-4">The environment needs our protection</h1>
-                    <p class="mb-0">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                    <h5 class="text-uppercase text-primary">Active Campaigns</h5>
+                    <h1 class="mb-4">Four Urgent Causes Shaping Our Digital Environment</h1>
+                    <p class="mb-0">Each campaign below represents a tangible action we can take together this year — from refurbishing used laptops to drafting city-level e-waste ordinances. Every dollar is matched by local corporate partners up to ₱1M.</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-6 col-xl-3">
                         <div class="causes-item">
                             <div class="causes-img">
-                                <img src="img/causes-4.jpg" class="img-fluid w-100" alt="Image">
+                                <img src="img/causes-4.jpg" class="img-fluid w-100" alt="Device Refurbishment Program">
                                 <div class="causes-link pb-2 px-3">
-                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $3600</small>
-                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $4000</small>
+                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $5,000</small>
+                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $3,250</small>
                                 </div>
                                 <div class="causes-dination p-2">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="contact.html">Support the Cause</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="donation.html">Support the Cause</a>
                                 </div>
                             </div>
                             <div class="progress">
@@ -137,22 +151,22 @@
                                 </div>
                             </div>
                             <div class="causes-content p-4">
-                                <h4 class="mb-3">Promote Device Refurbishment Programs</h4>
-                                <p class="mb-4">Help extend the lifecycle of electronics by supporting refurbishment initiatives that reduce e-waste and make technology more accessible.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="#">Read More</a>
+                                <h4 class="mb-3">Device Refurbishment Labs</h4>
+                                <p class="mb-4">Equip three school-based workshops with diagnostic tools, soldering stations, and licensed OS installers so we can repair 500+ donated laptops yearly instead of discarding them.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="donation.html">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-3">
                         <div class="causes-item">
                             <div class="causes-img">
-                                <img src="img/causes-2.jpg" class="img-fluid w-100" alt="Image">
+                                <img src="img/causes-2.jpg" class="img-fluid w-100" alt="Indigenous Community Digital Literacy">
                                 <div class="causes-link pb-2 px-3">
-                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $3600</small>
-                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $4000</small>
+                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $6,500</small>
+                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $4,875</small>
                                 </div>
                                 <div class="causes-dination p-2">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="contact.html">Support the Cause</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="donation.html">Support the Cause</a>
                                 </div>
                             </div>
                             <div class="progress">
@@ -161,22 +175,22 @@
                                 </div>
                             </div>
                             <div class="causes-content p-4">
-                                <h4 class="mb-3">Digital Literacy for Underserved Communities</h4>
-                                <p class="mb-4">We provide digital education resources and training to help underserved communities build essential technology skills for the modern world.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                <h4 class="mb-3">Lumad &amp; Ata Digital Literacy Bus</h4>
+                                <p class="mb-4">Convert a 4x4 utility vehicle into a solar-powered mobile classroom with 12 rugged tablets, offline learning modules, and 2 trained community educators for Talaingod and Bukidnon IP schools.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="donation.html">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-3">
                         <div class="causes-item">
                             <div class="causes-img">
-                                <img src="img/causes-3.jpg" class="img-fluid w-100" alt="Image">
+                                <img src="img/causes-3.jpg" class="img-fluid w-100" alt="E-Waste Collection Center Network">
                                 <div class="causes-link pb-2 px-3">
-                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $3600</small>
-                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $4000</small>
+                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $4,200</small>
+                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $3,570</small>
                                 </div>
                                 <div class="causes-dination p-2">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="contact.html">Support the Cause</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="donation.html">Support the Cause</a>
                                 </div>
                             </div>
                             <div class="progress">
@@ -185,22 +199,22 @@
                                 </div>
                             </div>
                             <div class="causes-content p-4">
-                                <h4 class="mb-3">Establish E-Waste Collection Centers</h4>
-                                <p class="mb-4">We work to set up convenient collection points where communities can safely dispose of old electronics and prevent toxic materials from harming the environment.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                <h4 class="mb-3">Matina Barangay E-Waste Hub</h4>
+                                <p class="mb-4">Launch the first community-owned collection center in Davao City: certified lithium-battery storage, DENR-compliant paperwork, monthly pickup routes, and 12 local jobs for waste-sorting cooperatives.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="donation.html">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-3">
                         <div class="causes-item">
                             <div class="causes-img">
-                                <img src="img/causes-1.jpg" class="img-fluid w-100" alt="Image">
+                                <img src="img/causes-1.jpg" class="img-fluid w-100" alt="Online Privacy and Data Minimalism Campaign">
                                 <div class="causes-link pb-2 px-3">
-                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $3600</small>
-                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $4000</small>
+                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $8,000</small>
+                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $7,600</small>
                                 </div>
                                 <div class="causes-dination p-2">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="contact.html">Support the Cause</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="donation.html">Support the Cause</a>
                                 </div>
                             </div>
                             <div class="progress">
@@ -209,9 +223,9 @@
                                 </div>
                             </div>
                             <div class="causes-content p-4">
-                                <h4 class="mb-3">Online Privacy Awareness Campaign</h4>
-                                <p class="mb-4">We educate individuals about data privacy, secure online practices, and the environmental costs of excessive data storage and cloud usage.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                <h4 class="mb-3">Data Minimalism &amp; Privacy Billboards</h4>
+                                <p class="mb-4">Only $400 left! Install 20 jeepney and ferry-terminal privacy-awareness displays, print 10,000 DPA-compliant family checklists, and run a 3-month radio series on Bombo Radyo Davao.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="donation.html">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -238,23 +252,23 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Our Services</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Digital Education Programs</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Device Recycling & E-Waste Management</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Energy-Efficient Technology Advocacy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Online Privacy & Data Protection</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Digital Wellness Initiatives</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Sustainable Computing Workshops</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Digital Education Programs</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Device Recycling &amp; E-Waste Management</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Energy-Efficient Technology Advocacy</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Online Privacy &amp; Data Protection</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Digital Wellness Initiatives</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Sustainable Computing Workshops</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Volunteer</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Ethan Torrejas</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Lee Ilagan</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Ivan Pamarato</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Haizarr Samparani</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> </a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> </a>
+                            <h4 class="mb-4 text-white">Quick Links</h4>
+                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> About EcoByte</a>
+                            <a href="causes.html"><i class="fas fa-angle-right me-2"></i> Our Active Causes</a>
+                            <a href="events.html"><i class="fas fa-angle-right me-2"></i> Community Events</a>
+                            <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Green ICT Blog</a>
+                            <a href="volunteer.html"><i class="fas fa-angle-right me-2"></i> Become a Volunteer</a>
+                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Our Team</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">

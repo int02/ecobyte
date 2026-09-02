@@ -3,11 +3,40 @@
 
     <head>
         <meta charset="utf-8">
-        <title>EcoByte | Home</title>
+        <title>EcoByte | Green ICT & Responsible Internet Use</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
-        <link rel="icon" href="img/ecobytevertical.png" type="image/png">
+        <meta content="Green ICT, Responsible Internet Use, Sustainable Technology, E-Waste Recycling, Digital Wellness, Energy Efficient Computing, Davao Green Tech, EcoByte, Digital Carbon Footprint, Privacy Protection" name="keywords">
+        <meta content="EcoByte promotes Green ICT and responsible internet use through education, e-waste management, energy-efficient advocacy, and digital privacy protection. Build a cleaner digital future with us." name="description">
+        <link rel="icon" id="favicon" href="img/ecobytevertical.png" type="image/png">
+        <script>
+            (function() {
+                var savedTheme = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+                document.addEventListener('DOMContentLoaded', function() {
+                    var favicon = document.getElementById('favicon');
+                    if (favicon) {
+                        var canvas = document.createElement('canvas');
+                        canvas.width = 64;
+                        canvas.height = 64;
+                        var ctx = canvas.getContext('2d');
+                        var bgColor = theme === 'dark' ? '#4ade80' : '#1b4332';
+                        var img = new Image();
+                        img.crossOrigin = 'anonymous';
+                        img.onload = function() {
+                            ctx.fillStyle = bgColor;
+                            ctx.beginPath();
+                            ctx.roundRect(0, 0, 64, 64, 12);
+                            ctx.fill();
+                            ctx.drawImage(img, 8, 8, 48, 48);
+                            favicon.href = canvas.toDataURL('image/png');
+                        };
+                        img.src = 'img/ecobytevertical.png';
+                    }
+                });
+            })();
+        </script>
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,8 +75,8 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-8">
                             <div class="topbar-info d-flex flex-wrap">
-                                <a href="#" class="text-light me-4"><i class="fas fa-envelope text-white me-2"></i>info@ecobyte.com</a>
-                                <a href="#" class="text-light"><i class="fas fa-phone-alt text-white me-2"></i>+63 939 267 1159</a>
+                                <a href="mailto:info@ecobyte.com" class="text-light me-4"><i class="fas fa-envelope text-white me-2"></i>info@ecobyte.com</a>
+                                <a href="tel:+639392671159" class="text-light"><i class="fas fa-phone-alt text-white me-2"></i>+63 939 267 1159</a>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -61,14 +90,16 @@
                         </div>
                     </div>
                 </div>
-                <nav class="navbar navbar-light bg-light navbar-expand-xl">
+                <nav class="navbar navbar-light navbar-expand-xl">
                     <a href="index.html" class="navbar-brand ms-3">
-                        <img src="img/ecobytehorizontal.png" alt="EcoByte Logo" class="img-fluid" style="max-height: 54px; width: auto;">
+                        <span class="navbar-brand-logo-wrapper">
+                            <img src="img/ecobytehorizontal.png" alt="EcoByte Logo" class="img-fluid logo-img">
+                        </span>
                     </a>
                     <button class="navbar-toggler py-2 px-3 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>
-                    <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto">
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
@@ -82,12 +113,16 @@
                                     <a href="gallery.html" class="dropdown-item">Gallery</a>
                                     <a href="volunteer.html" class="dropdown-item">Volunteers</a>
                                     <a href="donation.html" class="dropdown-item">Donation</a>
-
+                                    <a href="404.html" class="dropdown-item">404 Error</a>
                                 </div>
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="d-flex align-items-center flex-nowrap pt-xl-0" style="margin-left: 15px;">
+                            <button class="theme-toggle-btn" type="button" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                            </button>
                             <a href="contact.html" class="btn-hover-bg btn btn-primary text-white py-2 px-4 me-3">Support the Cause</a>
                         </div>
                     </div>
@@ -107,40 +142,40 @@
                 </ol>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img src="img/carousel-1.jpg" class="img-fluid" alt="Image">
+                        <img src="img/carousel-1.jpg" class="img-fluid" alt="Sustainable Technology Initiative">
                         <div class="carousel-caption">
                             <div class="p-3" style="max-width: 900px;">
-                                <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Green ICT & Careful Use Of Internet</h4>
+                                <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Green ICT &amp; Responsible Internet Use</h4>
                                 <h1 class="display-1 text-capitalize text-white mb-4">Smarter Tech, Cleaner Planet</h1>
-                                <p class="mb-5 fs-5">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                                <p class="mb-5 fs-5">Every click, stream, and device leaves a digital carbon footprint. EcoByte empowers you to minimize environmental impact while maximizing the benefits of connected life through mindful Green ICT practices.</p>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-3 px-5" href="#">Join the Green ICT Movement</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-3 px-5" href="volunteer.html">Join the Green ICT Movement</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/carousel-2.jpg" class="img-fluid" alt="Image">
+                        <img src="img/carousel-2.jpg" class="img-fluid" alt="E-Waste Recycling Program">
                         <div class="carousel-caption">
                             <div class="p-3" style="max-width: 900px;">
-                                <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Green ICT & Careful Use Of Internet</h4>
-                                <h1 class="display-1 text-capitalize text-white mb-4">Smarter Tech, Cleaner Planet</h1>
-                                <p class="mb-5 fs-5">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                                <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Circular Digital Economy</h4>
+                                <h1 class="display-1 text-capitalize text-white mb-4">Recycle Devices, Restore Ecosystems</h1>
+                                <p class="mb-5 fs-5">Electronic waste poisons landfills with toxic heavy metals. Our refurbishment and safe-disposal programs extend device lifecycles, recover precious materials, and keep communities free from e-waste contamination.</p>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-3 px-5" href="#">Join the Green ICT Movement</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-3 px-5" href="causes.html">Explore Our Causes</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/carousel-3.jpg" class="img-fluid" alt="Image">
+                        <img src="img/carousel-3.jpg" class="img-fluid" alt="Digital Wellness and Privacy">
                         <div class="carousel-caption">
                             <div class="p-3" style="max-width: 900px;">
-                                <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Green ICT & Careful Use Of Internet</h4>
-                                <h1 class="display-1 text-capitalize text-white mb-4">Smarter Tech, Cleaner Planet</h1>
-                                <p class="mb-5 fs-5">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                                <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Digital Wellbeing &amp; Privacy</h4>
+                                <h1 class="display-1 text-capitalize text-white mb-4">Conscious Connections, Protected Lives</h1>
+                                <p class="mb-5 fs-5">Responsible internet use means protecting your attention, your data, and your mental health. Learn how to navigate the web safely, reduce unnecessary data consumption, and build sustainable digital habits.</p>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-3 px-5" href="#">Join the Green ICT Movement</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-3 px-5" href="service.html">Discover Our Programs</a>
                                 </div>
                             </div>
                         </div>
@@ -172,9 +207,9 @@
                         </div>
                     </div>
                     <div class="col-xl-7">
-                        <h5 class="text-uppercase text-primary">About Us</h5>
-                        <h1 class="mb-4">Our mission is to make digital life cleaner, safer, and more responsible.</h1>
-                        <p class="fs-5 mb-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                        <h5 class="text-uppercase text-primary">About EcoByte</h5>
+                        <h1 class="mb-4">Our mission is to make digital life cleaner, safer, and more responsible for everyone.</h1>
+                        <p class="fs-5 mb-4">Founded in Davao City, EcoByte is a community-driven initiative bridging environmental sustainability and digital technology. We believe that Green ICT isn't an option — it's an essential responsibility for every person, school, and business in a connected world.</p>
                         <div class="tab-class bg-secondary p-4">
                             <ul class="nav d-flex mb-2">
                                 <li class="nav-item mb-3">
@@ -199,10 +234,10 @@
                                         <div class="col-12">
                                             <div class="d-flex">
                                                 <div class="text-start my-auto">
-                                                    <h5 class="text-uppercase mb-3">Digital Wellness</h5>
-                                                    <p class="mb-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                                                    <h5 class="text-uppercase mb-3">Our Story &amp; Identity</h5>
+                                                    <p class="mb-4">EcoByte began as a student-led campaign to address the growing environmental and social costs of unregulated digital consumption. Today, we work with schools, barangays, and local governments across Mindanao to design programs that turn everyday technology users into informed stewards of the digital planet.</p>
                                                     <div class="d-flex align-items-center justify-content-start">
-                                                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="about.html">Read More</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -214,10 +249,10 @@
                                         <div class="col-12">
                                             <div class="d-flex">
                                                 <div class="text-start my-auto">
-                                                    <h5 class="text-uppercase mb-3">Energy Efficiency</h5>
-                                                    <p class="mb-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                                                    <h5 class="text-uppercase mb-3">Our Mission</h5>
+                                                    <p class="mb-4">To empower Filipino communities with the knowledge, tools, and support systems needed to adopt energy-efficient technology, eliminate toxic e-waste, practice responsible internet use, and protect digital privacy — building a circular, inclusive, and low-carbon digital economy one device at a time.</p>
                                                     <div class="d-flex align-items-center justify-content-start">
-                                                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="about.html">Read More</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -229,10 +264,10 @@
                                         <div class="col-12">
                                             <div class="d-flex">
                                                 <div class="text-start my-auto">
-                                                    <h5 class="text-uppercase mb-3">Responsible Access</h5>
-                                                    <p class="mb-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                                                    <h5 class="text-uppercase mb-3">Our Vision 2030</h5>
+                                                    <p class="mb-4">A Philippines where every household uses energy-saving devices, every community has a certified e-waste collection point, every child learns digital citizenship in school, and every citizen navigates the internet with awareness — creating a zero-waste digital nation that leads ASEAN in Green ICT innovation.</p>
                                                     <div class="d-flex align-items-center justify-content-start">
-                                                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="about.html">Read More</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -252,49 +287,49 @@
         <div class="container-fluid service py-5 bg-light">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                    <h5 class="text-uppercase text-primary">What we do</h5>
-                    <h1 class="mb-0">How we support Green ICT & Careful Use Of Internet</h1>
+                    <h5 class="text-uppercase text-primary">What We Do</h5>
+                    <h1 class="mb-0">Four Pillars of Green ICT &amp; Responsible Internet Use</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="service-item">
-                            <img src="img/service-1.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/service-1.jpg" class="img-fluid w-100" alt="Digital Education Programs">
                             <div class="service-link">
-                                <a href="#" class="h4 mb-0">Digital Education Programs</a>
+                                <a href="service.html" class="h4 mb-0">Digital Education Programs</a>
                             </div>
                         </div>
-                        <p class="my-4">We provide comprehensive training and resources to help individuals and communities understand sustainable technology practices and build digital literacy skills aligned with environmental responsibility.</p>
+                        <p class="my-4">Hands-on workshops, classroom modules, and community learning sessions that teach sustainable technology practices, critical digital citizenship, and eco-conscious computing from barangay halls to university campuses.</p>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="service-item">
-                            <img src="img/service-2.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/service-2.jpg" class="img-fluid w-100" alt="E-Waste Management and Recycling">
                             <div class="service-link">
-                                <a href="#" class="h4 mb-0">Device Recycling & E-Waste Management</a>
+                                <a href="service.html" class="h4 mb-0">Device Recycling &amp; E-Waste Management</a>
                             </div>
                         </div>
-                        <p class="my-4">We partner with organizations to properly recycle old electronics and manage e-waste responsibly, preventing harmful materials from entering landfills and ecosystems.</p>
+                        <p class="my-4">Certified collection drives, partnerships with DENR-accredited recyclers, and community refurbishment hubs that keep phones, laptops, and batteries out of open dumps — recovering materials and extending device lifespans.</p>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="service-item">
-                            <img src="img/service-3.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/service-3.jpg" class="img-fluid w-100" alt="Energy Efficient Technology Advocacy">
                             <div class="service-link">
-                                <a href="#" class="h4 mb-0">Energy-Efficient Technology Advocacy</a>
+                                <a href="service.html" class="h4 mb-0">Energy-Efficient Technology Advocacy</a>
                             </div>
                         </div>
-                        <p class="my-4">We advocate for the adoption of energy-efficient devices and practices, working with businesses and individuals to reduce digital carbon footprints.</p>
+                        <p class="my-4">Energy audits for schools and offices, ENERGY STAR device guidance, power-management toolkits, and policy recommendations that slash kilowatt-hour use and lower the carbon footprint of digital infrastructure.</p>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="service-item">
-                            <img src="img/service-4.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/service-4.jpg" class="img-fluid w-100" alt="Online Privacy and Data Protection">
                             <div class="service-link">
-                                <a href="#" class="h4 mb-0">Online Privacy & Data Protection</a>
+                                <a href="service.html" class="h4 mb-0">Online Privacy &amp; Data Protection</a>
                             </div>
                         </div>
-                        <p class="my-4">We educate users on protecting their digital privacy, understanding data collection practices, and taking control of their personal information online.</p>
+                        <p class="my-4">Free privacy audits, Data Privacy Act (DPA) briefings, password-safety campaigns, and guides to minimizing digital traces — because responsible internet use protects both the planet and the people on it.</p>
                     </div>
                     <div class="col-12">
                         <div class="d-flex align-items-center justify-content-center">
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="service.html">Explore All Services</a>
                         </div>
                     </div>
                 </div>
@@ -307,55 +342,55 @@
         <div class="container-fluid donation py-5">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                    <h5 class="text-uppercase text-primary">Donation</h5>
-                    <h1 class="mb-0">Support Green ICT Initiatives</h1>
+                    <h5 class="text-uppercase text-primary">Support Our Work</h5>
+                    <h1 class="mb-0">Your Contribution Builds a Greener Digital Philippines</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4">
                         <div class="donation-item">
-                            <img src="img/donation-1.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/donation-1.jpg" class="img-fluid w-100" alt="Device Refurbishment and Lifecycle Program">
                             <div class="donation-content d-flex flex-column">
-                                <h5 class="text-uppercase text-primary mb-4">Device Lifecycle</h5>
-                                <a href="#" class="btn-hover-color display-6 text-white">Help Us More</a>
-                                <h4 class="text-white mb-4">Smarter Tech, Cleaner Planet</h4>
-                                <p class="text-white mb-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                                <h5 class="text-uppercase text-primary mb-4">Device Lifecycle Fund</h5>
+                                <a href="donation.html" class="btn-hover-color display-6 text-white">Fund This Program</a>
+                                <h4 class="text-white mb-4">Refurbish 500 Laptops for Public Schools</h4>
+                                <p class="text-white mb-4">Your gift purchases replacement batteries, memory modules, and licensed productivity software for devices we've refurbished — then donates them to Grade 7 classrooms across Davao del Sur that have zero working computers.</p>
                                 <div class="donation-btn d-flex align-items-center justify-content-start">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Donate !</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="donation.html">Donate Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="donation-item">
-                            <img src="img/service-2.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/service-2.jpg" class="img-fluid w-100" alt="Community E-Waste Hub">
                             <div class="donation-content d-flex flex-column">
-                                <h5 class="text-uppercase text-primary mb-4">Digital Wellness</h5>
-                                <a href="#" class="btn-hover-color display-6 text-white">Help Us More</a>
-                                <h4 class="text-white mb-4">Smarter Tech, Cleaner Planet</h4>
-                                <p class="text-white mb-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                                <h5 class="text-uppercase text-primary mb-4">E-Waste Hub Network</h5>
+                                <a href="donation.html" class="btn-hover-color display-6 text-white">Fund This Program</a>
+                                <h4 class="text-white mb-4">Open 20 Certified E-Waste Collection Hubs</h4>
+                                <p class="text-white mb-4">Each barangay collection hub costs roughly ₱45,000 to equip with safety signage, hazardous-material bins, and certified pickup logistics — ensuring 2.3 tons of dead lithium batteries and circuit boards never reach the Matina landfill.</p>
                                 <div class="donation-btn d-flex align-items-center justify-content-start">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Donate !</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="donation.html">Donate Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="donation-item">
-                            <img src="img/donation-3.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/donation-3.jpg" class="img-fluid w-100" alt="Youth Digital Education Program">
                             <div class="donation-content d-flex flex-column">
-                                <h5 class="text-uppercase text-primary mb-4">Circular Economy</h5>
-                                <a href="#" class="btn-hover-color display-6 text-white">Help Us More</a>
-                                <h4 class="text-white mb-4">Smarter Tech, Cleaner Planet</h4>
-                                <p class="text-white mb-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                                <h5 class="text-uppercase text-primary mb-4">Green ICT Scholarship</h5>
+                                <a href="donation.html" class="btn-hover-color display-6 text-white">Fund This Program</a>
+                                <h4 class="text-white mb-4">Train 1,000 Youth as Green ICT Ambassadors</h4>
+                                <p class="text-white mb-4">A ₱500 scholarship covers a 12-week training kit: a printed sustainability handbook, workshop transportation, a solar-charging power bank, and a graduation certificate — building a youth-led movement across Mindanao high schools.</p>
                                 <div class="donation-btn d-flex align-items-center justify-content-start">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Donate !</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="donation.html">Donate Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="d-flex align-items-center justify-content-center">
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">All Donation</a>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="donation.html">View All Campaigns</a>
                         </div>
                     </div>
                 </div>
@@ -368,8 +403,8 @@
         <div class="container-fluid counter py-5" style="background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4)), url(img/volunteers-bg.jpg) center center; background-size: cover;">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                    <h5 class="text-uppercase text-primary">Achievements</h5>
-                    <p class="text-white mb-0">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                    <h5 class="text-uppercase text-primary">Our Collective Impact</h5>
+                    <p class="text-white mb-0">Every metric below represents a real community, a classroom equipped, a barangay protected from e-waste, or a Filipino citizen who now uses the internet with intention, safety, and care — made possible by advocates like you.</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-6 col-xl-3">
@@ -414,7 +449,7 @@
                     </div>
                     <div class="col-12">
                         <div class="d-flex align-items-center justify-content-center">
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Join the Green ICT Movement</a>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="volunteer.html">Join the Green ICT Movement</a>
                         </div>
                     </div>
                 </div>
@@ -427,21 +462,21 @@
         <div class="container-fluid causes py-5">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                    <h5 class="text-uppercase text-primary">Recent Causes</h5>
-                    <h1 class="mb-4">The environment needs our protection</h1>
-                    <p class="mb-0">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
+                    <h5 class="text-uppercase text-primary">Active Campaigns</h5>
+                    <h1 class="mb-4">Four Urgent Causes Shaping Our Digital Environment</h1>
+                    <p class="mb-0">Each campaign below represents a tangible action we can take together this year — from refurbishing used laptops to drafting city-level e-waste ordinances. Every dollar is matched by local corporate partners up to ₱1M.</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-6 col-xl-3">
                         <div class="causes-item">
                             <div class="causes-img">
-                                <img src="img/causes-4.jpg" class="img-fluid w-100" alt="Image">
+                                <img src="img/causes-4.jpg" class="img-fluid w-100" alt="Device Refurbishment Program">
                                 <div class="causes-link pb-2 px-3">
-                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $3600</small>
-                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $4000</small>
+                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $5,000</small>
+                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $3,250</small>
                                 </div>
                                 <div class="causes-dination p-2">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="contact.html">Support the Cause</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="donation.html">Support the Cause</a>
                                 </div>
                             </div>
                             <div class="progress">
@@ -450,22 +485,22 @@
                                 </div>
                             </div>
                             <div class="causes-content p-4">
-                                <h4 class="mb-3">Promote Device Refurbishment Programs</h4>
-                                <p class="mb-4">Help extend the lifecycle of electronics by supporting refurbishment initiatives that reduce e-waste and make technology more accessible.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="#">Read More</a>
+                                <h4 class="mb-3">Device Refurbishment Labs</h4>
+                                <p class="mb-4">Equip three school-based workshops with diagnostic tools, soldering stations, and licensed OS installers so we can repair 500+ donated laptops yearly instead of discarding them.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="causes.html">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-3">
                         <div class="causes-item">
                             <div class="causes-img">
-                                <img src="img/causes-2.jpg" class="img-fluid w-100" alt="Image">
+                                <img src="img/causes-2.jpg" class="img-fluid w-100" alt="Indigenous Community Digital Literacy">
                                 <div class="causes-link pb-2 px-3">
-                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $3600</small>
-                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $4000</small>
+                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $6,500</small>
+                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $4,875</small>
                                 </div>
                                 <div class="causes-dination p-2">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="contact.html">Support the Cause</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="donation.html">Support the Cause</a>
                                 </div>
                             </div>
                             <div class="progress">
@@ -474,22 +509,22 @@
                                 </div>
                             </div>
                             <div class="causes-content p-4">
-                                <h4 class="mb-3">Digital Literacy for Underserved Communities</h4>
-                                <p class="mb-4">We provide digital education resources and training to help underserved communities build essential technology skills for the modern world.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                <h4 class="mb-3">Lumad &amp; Ata Digital Literacy Bus</h4>
+                                <p class="mb-4">Convert a 4x4 utility vehicle into a solar-powered mobile classroom with 12 rugged tablets, offline learning modules, and 2 trained community educators for Talaingod and Bukidnon IP schools.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="causes.html">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-3">
                         <div class="causes-item">
                             <div class="causes-img">
-                                <img src="img/causes-3.jpg" class="img-fluid w-100" alt="Image">
+                                <img src="img/causes-3.jpg" class="img-fluid w-100" alt="E-Waste Collection Center Network">
                                 <div class="causes-link pb-2 px-3">
-                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $3600</small>
-                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $4000</small>
+                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $4,200</small>
+                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $3,570</small>
                                 </div>
                                 <div class="causes-dination p-2">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="contact.html">Support the Cause</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="donation.html">Support the Cause</a>
                                 </div>
                             </div>
                             <div class="progress">
@@ -498,22 +533,22 @@
                                 </div>
                             </div>
                             <div class="causes-content p-4">
-                                <h4 class="mb-3">Establish E-Waste Collection Centers</h4>
-                                <p class="mb-4">We work to set up convenient collection points where communities can safely dispose of old electronics and prevent toxic materials from harming the environment.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                <h4 class="mb-3">Matina Barangay E-Waste Hub</h4>
+                                <p class="mb-4">Launch the first community-owned collection center in Davao City: certified lithium-battery storage, DENR-compliant paperwork, monthly pickup routes, and 12 local jobs for waste-sorting cooperatives.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="causes.html">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-3">
                         <div class="causes-item">
                             <div class="causes-img">
-                                <img src="img/causes-1.jpg" class="img-fluid w-100" alt="Image">
+                                <img src="img/causes-1.jpg" class="img-fluid w-100" alt="Online Privacy and Data Minimalism Campaign">
                                 <div class="causes-link pb-2 px-3">
-                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $3600</small>
-                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $4000</small>
+                                    <small class="text-white"><i class="fas fa-chart-bar text-primary me-2"></i>Goal: $8,000</small>
+                                    <small class="text-white"><i class="fa fa-thumbs-up text-primary me-2"></i>Raised: $7,600</small>
                                 </div>
                                 <div class="causes-dination p-2">
-                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="contact.html">Support the Cause</a>
+                                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-3" href="donation.html">Support the Cause</a>
                                 </div>
                             </div>
                             <div class="progress">
@@ -522,9 +557,9 @@
                                 </div>
                             </div>
                             <div class="causes-content p-4">
-                                <h4 class="mb-3">Online Privacy Awareness Campaign</h4>
-                                <p class="mb-4">We educate individuals about data privacy, secure online practices, and the environmental costs of excessive data storage and cloud usage.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                <h4 class="mb-3">Data Minimalism &amp; Privacy Billboards</h4>
+                                <p class="mb-4">Only $400 left! Install 20 jeepney and ferry-terminal privacy-awareness displays, print 10,000 DPA-compliant family checklists, and run a 3-month radio series on Bombo Radyo Davao.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="causes.html">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -538,56 +573,56 @@
         <div class="container-fluid event py-5">
             <div class="container py-5">
                 <div class="text-center mx-auto mb-5" style="max-width: 800px;">
-                    <h5 class="text-uppercase text-primary">Upcoming Events</h5>
-                    <h1 class="mb-0">Join us for workshops, drives, and seminars that promote sustainable technology and digital responsibility.</h1>
+                    <h5 class="text-uppercase text-primary">Calendar of Action</h5>
+                    <h1 class="mb-0">Community Workshops, Collection Drives &amp; Advocacy Summits Open to All Filipinos</h1>
                 </div>
                 <div class="event-carousel owl-carousel">
                     <div class="event-item">
-                        <img src="img/events-1.jpg" class="img-fluid w-100" alt="Image">
+                        <img src="img/events-1.jpg" class="img-fluid w-100" alt="Sustainable Tech Workshop">
                         <div class="event-content p-4">
                             <div class="d-flex justify-content-between mb-4">
-                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Davao Convention Center, Davao City</span>
+                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Matina Barangay Hall, Davao City</span>
                                 <span class="text-body"><i class="fas fa-calendar-alt me-2"></i>15 Mar, 2025</span>
                             </div>
-                            <h4 class="mb-4">Sustainable Tech Workshop for Beginners</h4>
-                            <p class="mb-4">We help communities reduce unnecessary data use, protect devices, and build healthier digital habits.</p>
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                            <h4 class="mb-4">Sustainable Tech Workshop for Families</h4>
+                            <p class="mb-4">A 3-hour Saturday session teaching parents and high schoolers how to reduce streaming data costs, configure automatic power-saving modes, cut e-charging waste by 40%, and spot misinformation online.</p>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="events.html">Event Details</a>
                         </div>
                     </div>
                     <div class="event-item">
-                        <img src="img/events-2.jpg" class="img-fluid w-100" alt="Image">
+                        <img src="img/events-2.jpg" class="img-fluid w-100" alt="E-Waste Recycling Drive">
                         <div class="event-content p-4">
                             <div class="d-flex justify-content-between mb-4">
-                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Davao Convention Center, Davao City</span>
+                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Gaisano Mall Parking Lot, Davao</span>
                                 <span class="text-body"><i class="fas fa-calendar-alt me-2"></i>22 Apr, 2025</span>
                             </div>
-                            <h4 class="mb-4">E-Waste Recycling Community Drive</h4>
-                            <p class="mb-4">We help communities reduce unnecessary data use, protect devices, and build healthier digital habits.</p>
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                            <h4 class="mb-4">Earth Day E-Waste Collection Drive</h4>
+                            <p class="mb-4">Bring your old phones, dead chargers, broken laptops, and used button batteries. The first 200 donors get a free EcoByte canvas tote and seed paper embedded with Philippine native tree seeds.</p>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="events.html">Event Details</a>
                         </div>
                     </div>
                     <div class="event-item">
-                        <img src="img/events-3.jpg" class="img-fluid w-100" alt="Image">
+                        <img src="img/events-3.jpg" class="img-fluid w-100" alt="Digital Privacy Seminar">
                         <div class="event-content p-4">
                             <div class="d-flex justify-content-between mb-4">
-                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Davao Convention Center, Davao City</span>
+                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>UP Mindanao Auditorium, Davao</span>
                                 <span class="text-body"><i class="fas fa-calendar-alt me-2"></i>10 May, 2025</span>
                             </div>
-                            <h4 class="mb-4">Digital Privacy & Security Seminar</h4>
-                            <p class="mb-4">We help communities reduce unnecessary data use, protect devices, and build healthier digital habits.</p>
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                            <h4 class="mb-4">Data Privacy &amp; Responsible Sharing Summit</h4>
+                            <p class="mb-4">Lawyers from the NPC Davao Regional Office, child online-protection specialists, and data-minimization experts gather for a free public summit with live Q&amp;A — open to teachers, barangay workers, and parents.</p>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="events.html">Event Details</a>
                         </div>
                     </div>
                     <div class="event-item">
-                        <img src="img/events-4.jpg" class="img-fluid w-100" alt="Image">
+                        <img src="img/events-4.jpg" class="img-fluid w-100" alt="Youth Green ICT Conference">
                         <div class="event-content p-4">
                             <div class="d-flex justify-content-between mb-4">
-                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Davao Convention Center, Davao City</span>
+                                <span class="text-body"><i class="fas fa-map-marker-alt me-2"></i>Philippine Women's College of Davao</span>
                                 <span class="text-body"><i class="fas fa-calendar-alt me-2"></i>28 Jun, 2025</span>
                             </div>
-                            <h4 class="mb-4">Youth Green ICT Leadership Conference</h4>
-                            <p class="mb-4">We help communities reduce unnecessary data use, protect devices, and build healthier digital habits.</p>
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                            <h4 class="mb-4">Mindanao Youth Green ICT Congress</h4>
+                            <p class="mb-4">180 student leaders from 45 Mindanao campuses gather for a 2-day congress: hackathons for eco-friendly apps, panel debates on digital colonialism, and election of the 2025 Regional Youth Green ICT Council.</p>
+                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="events.html">Event Details</a>
                         </div>
                     </div>
                 </div>
@@ -599,19 +634,19 @@
         <div class="container-fluid blog py-5 mb-5">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                    <h5 class="text-uppercase text-primary">Latest News</h5>
-                    <h1 class="mb-0">Stay informed with the latest Green ICT insights and digital sustainability stories.</h1>
+                    <h5 class="text-uppercase text-primary">Journal &amp; Updates</h5>
+                    <h1 class="mb-0">Data-Driven Stories, Field Reports, and Actionable Guides from the EcoByte Team</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-6 col-xl-3">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-1.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/blog-1.jpg" class="img-fluid w-100" alt="Sustainable Tech Habits Guide">
                                 <div class="blog-info">
-                                    <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+                                    <span><i class="fa fa-clock"></i> Jan 12, 2025</span>
                                     <div class="d-flex">
-                                        <span class="me-3"> 3 <i class="fa fa-heart"></i></span>
-                                        <a href="#" class="text-white">0 <i class="fa fa-comment"></i></a>
+                                        <span class="me-3"> 14 <i class="fa fa-heart"></i></span>
+                                        <a href="blog.html" class="text-white">2 <i class="fa fa-comment"></i></a>
                                     </div>
                                 </div>
                                 <div class="search-icon">
@@ -619,21 +654,21 @@
                                 </div>
                             </div>
                             <div class="text-dark border p-4 ">
-                                <h4 class="mb-4">Sustainable Tech Habits for a Greener Digital Future</h4>
-                                <p class="mb-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                <h4 class="mb-4">12 Habits That Cut Household Digital Energy Use by 38%</h4>
+                                <p class="mb-4">After tracking 64 Davao households for three months, we identified the highest-impact, zero-cost actions: from disabling auto-play to enabling sleep mode on routers. Here's the checklist every Filipino family can use tonight.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="blog.html">Read Article</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-3">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-2.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/blog-2.jpg" class="img-fluid w-100" alt="Digital Carbon Footprint Infographic">
                                 <div class="blog-info">
-                                    <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+                                    <span><i class="fa fa-clock"></i> Feb 03, 2025</span>
                                     <div class="d-flex">
-                                        <span class="me-3"> 3 <i class="fa fa-heart"></i></span>
-                                        <a href="#" class="text-white">0 <i class="fa fa-comment"></i></a>
+                                        <span class="me-3"> 27 <i class="fa fa-heart"></i></span>
+                                        <a href="blog.html" class="text-white">5 <i class="fa fa-comment"></i></a>
                                     </div>
                                 </div>
                                 <div class="search-icon">
@@ -641,21 +676,21 @@
                                 </div>
                             </div>
                             <div class="text-dark border p-4 ">
-                                <h4 class="mb-4">The Hidden Cost of Data: Understanding Your Digital Footprint</h4>
-                                <p class="mb-4">We help communities reduce unnecessary data use, protect devices, and build healthier digital habits.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                <h4 class="mb-4">The Hidden Carbon Cost of One TikTok Reel (Spoiler: It's Shocking)</h4>
+                                <p class="mb-4">Every minute of HD video streamed burns enough electricity to charge a feature phone for 9 hours. We break down the lifecycle math of a viral 15-second clip — from data center cooling to cell tower diesel — and teach you to stream with intention.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="blog.html">Read Article</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-3">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-4.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/blog-4.jpg" class="img-fluid w-100" alt="E-Waste Field Report">
                                 <div class="blog-info">
-                                    <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+                                    <span><i class="fa fa-clock"></i> Feb 19, 2025</span>
                                     <div class="d-flex">
-                                        <span class="me-3"> 3 <i class="fa fa-heart"></i></span>
-                                        <a href="#" class="text-white">0 <i class="fa fa-comment"></i></a>
+                                        <span class="me-3"> 41 <i class="fa fa-heart"></i></span>
+                                        <a href="blog.html" class="text-white">8 <i class="fa fa-comment"></i></a>
                                     </div>
                                 </div>
                                 <div class="search-icon">
@@ -663,21 +698,21 @@
                                 </div>
                             </div>
                             <div class="text-dark border p-4 ">
-                                <h4 class="mb-4">E-Waste: A Growing Environmental Crisis</h4>
-                                <p class="mb-4">We help communities reduce unnecessary data use, protect devices, and build healthier digital habits.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                <h4 class="mb-4">Field Report: The Informal E-Waste Recyclers of Barangay 76-A</h4>
+                                <p class="mb-4">We spent 8 days shadowing T'boli and Manobo waste pickers who manually sort 1.4 tons of discarded electronics monthly without gloves. Here is their policy ask, the health data we collected, and how EcoByte is partnering with their cooperative.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="blog.html">Read Article</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-3">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-3.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/blog-3.jpg" class="img-fluid w-100" alt="Green Computing Policy Brief">
                                 <div class="blog-info">
-                                    <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+                                    <span><i class="fa fa-clock"></i> Mar 02, 2025</span>
                                     <div class="d-flex">
-                                        <span class="me-3"> 3 <i class="fa fa-heart"></i></span>
-                                        <a href="#" class="text-white">0 <i class="fa fa-comment"></i></a>
+                                        <span class="me-3"> 22 <i class="fa fa-heart"></i></span>
+                                        <a href="blog.html" class="text-white">3 <i class="fa fa-comment"></i></a>
                                     </div>
                                 </div>
                                 <div class="search-icon">
@@ -685,9 +720,9 @@
                                 </div>
                             </div>
                             <div class="text-dark border p-4 ">
-                                <h4 class="mb-4">Green Computing: Reducing Your Digital Carbon Footprint</h4>
-                                <p class="mb-4">We help communities reduce unnecessary data use, protect devices, and build healthier digital habits.</p>
-                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
+                                <h4 class="mb-4">Open Letter: Mandate Green Procurement for All SUC Computers</h4>
+                                <p class="mb-4">The Philippine government purchases ₱12.7B in ICT equipment yearly — almost none with EPEAT or Energy Star certification. Our coalition's 14-page open letter to the DBM and CHED explains the 6-year savings, carbon math, and draft executive order.</p>
+                                <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="blog.html">Read Article</a>
                             </div>
                         </div>
                     </div>
@@ -697,73 +732,73 @@
         <!-- Blog End -->
         <div class="container-fluid gallery py-5 px-0">
             <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                <h5 class="text-uppercase text-primary">Our Work</h5>
-                <h1 class="mb-4">We champion sustainable technology and digital responsibility</h1>
-                <p class="mb-0">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future. Through education, advocacy, and community action, we work to reduce e-waste, lower digital carbon footprints, and empower individuals to make greener tech choices.</p>
+                <h5 class="text-uppercase text-primary">Impact Gallery</h5>
+                <h1 class="mb-4">On-the-Ground Moments from Green ICT Programs</h1>
+                <p class="mb-0">Each photo captures a real community action: from students learning digital citizenship for the first time to cooperative workers safely sorting e-waste. This is what responsible internet use and circular technology look like when communities lead.</p>
             </div>
             <div class="row g-0">
                 <div class="col-lg-4">
                     <div class="gallery-item">
-                        <img src="img/gallery-2.jpg" class="img-fluid w-100" alt="">
+                        <img src="img/gallery-2.jpg" class="img-fluid w-100" alt="Youth Digital Literacy Workshop">
                         <div class="search-icon">
                             <a href="img/gallery-2.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-search-plus btn-hover-color bg-white text-primary p-3"></i></a>
                         </div>
                         <div class="gallery-content">
                             <div class="gallery-inner pb-5">
-                                <a href="#" class="h4 text-white">Beauty Of Life</a>
-                                <a href="#" class="text-white"><p class="mb-0">Gallery Name</p></a>
+                                <a href="gallery.html" class="h4 text-white">Youth Green ICT Workshop</a>
+                                <a href="gallery.html" class="text-white"><p class="mb-0">Ateneo de Davao Grade 10 Cohort</p></a>
                             </div>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="img/gallery-3.jpg" class="img-fluid w-100" alt="">
+                        <img src="img/gallery-3.jpg" class="img-fluid w-100" alt="E-Waste Collection Drive">
                         <div class="search-icon">
                             <a href="img/gallery-3.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-search-plus btn-hover-color bg-white text-primary p-3"></i></a>
                         </div>
                         <div class="gallery-content">
                             <div class="gallery-inner pb-5">
-                                <a href="#" class="h4 text-white">Beauty Of Life</a>
-                                <a href="#" class="text-white"><p class="mb-0">Gallery Name</p></a>
+                                <a href="gallery.html" class="h4 text-white">E-Waste Collection Drive</a>
+                                <a href="gallery.html" class="text-white"><p class="mb-0">Gaisano Mall, Davao — 1,847 devices</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="gallery-item">
-                        <img src="img/gallery-1.jpg" class="img-fluid w-100" alt="">
+                        <img src="img/gallery-1.jpg" class="img-fluid w-100" alt="Community Privacy Seminar">
                         <div class="search-icon">
                             <a href="img/gallery-1.jpg" data-lightbox="gallery-1" class="my-auto"><i class="fas fa-search-plus btn-hover-color bg-white text-primary p-3"></i></a>
                         </div>
                         <div class="gallery-content">
                             <div class="gallery-inner pb-5">
-                                <a href="#" class="h4 text-white">Beauty Of Life</a>
-                                <a href="#" class="text-white"><p class="mb-0">Gallery Name</p></a>
+                                <a href="gallery.html" class="h4 text-white">Data Privacy Barangay Forum</a>
+                                <a href="gallery.html" class="text-white"><p class="mb-0">Matina, Davao City — Kapihan Session</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="gallery-item">
-                        <img src="img/gallery-4.jpg" class="img-fluid w-100" alt="">
+                        <img src="img/gallery-4.jpg" class="img-fluid w-100" alt="Device Refurbishment Lab">
                         <div class="search-icon">
                             <a href="img/gallery-4.jpg" data-lightbox="gallery-4" class="my-auto"><i class="fas fa-search-plus btn-hover-color bg-white text-primary p-3"></i></a>
                         </div>
                         <div class="gallery-content">
                             <div class="gallery-inner pb-5">
-                                <a href="#" class="h4 text-white">Beauty Of Life</a>
-                                <a href="#" class="text-white"><p class="mb-0">Gallery Name</p></a>
+                                <a href="gallery.html" class="h4 text-white">Device Refurbishment Lab</a>
+                                <a href="gallery.html" class="text-white"><p class="mb-0">USM Tech Hub, Kidapawan — 412 units</p></a>
                             </div>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="img/gallery-5.jpg" class="img-fluid w-100" alt="">
+                        <img src="img/gallery-5.jpg" class="img-fluid w-100" alt="IP Community Mobile Classroom">
                         <div class="search-icon">
                             <a href="img/gallery-5.jpg" data-lightbox="gallery-5" class="my-auto"><i class="fas fa-search-plus btn-hover-color bg-white text-primary p-3"></i></a>
                         </div>
                         <div class="gallery-content">
                             <div class="gallery-inner pb-5">
-                                <a href="#" class="h4 text-white">Beauty Of Life</a>
-                                <a href="#" class="text-white"><p class="mb-0">Gallery Name</p></a>
+                                <a href="gallery.html" class="h4 text-white">Solar Learning Bus Launch</a>
+                                <a href="gallery.html" class="text-white"><p class="mb-0">Talaingod Lumad Schools, Davao Norte</p></a>
                             </div>
                         </div>
                     </div>
@@ -818,15 +853,15 @@
                         </div>
                     </div>
                     <div class="col-lg-7">
-                        <h5 class="text-uppercase text-primary">Become a Volunteer?</h5>
-                        <h1 class="mb-4">Join your hand with us for a better life and beautiful future.</h1>
-                        <p class="mb-4">EcoByte promotes sustainable technology habits, energy-efficient devices, and responsible internet use for a healthier digital future. Join us in building practical digital sustainability skills and healthier online habits for communities everywhere.</p>
-                        <p class="text-dark"><i class="fa fa-check text-primary me-2"></i> We are friendly to each other.</p>
-                        <p class="text-dark"><i class="fa fa-check text-primary me-2"></i> If you Join the Green ICT Movement, we will help you build practical digital sustainability skills and healthier online habits.</p>
-                        <p class="text-dark"><i class="fa fa-check text-primary me-2"></i> It's an opportunity to help protect our environment.</p>
-                        <p class="text-dark"><i class="fa fa-check text-primary me-2"></i> No goal requirements.</p>
-                        <p class="text-dark mb-5"><i class="fa fa-check text-primary me-2"></i> Joining is totally free. We don't need any money from you.</p>
-                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Join the Green ICT Movement</a>
+                        <h5 class="text-uppercase text-primary">Volunteer with EcoByte</h5>
+                        <h1 class="mb-4">Lend Your Skills to a Greener, Safer Digital Philippines.</h1>
+                        <p class="mb-4">Whether you're a college student who can teach basic computing, an IT professional who can refurbish laptops on weekends, or a concerned parent who wants to run a barangay privacy workshop — there's a place for you on the EcoByte team. No tech degree required, just heart and curiosity.</p>
+                        <p class="text-dark"><i class="fa fa-check text-primary me-2"></i> 12 flexible volunteer tracks, from 2-hour event shifts to 6-month program leadership roles.</p>
+                        <p class="text-dark"><i class="fa fa-check text-primary me-2"></i> Every new volunteer receives a full EcoByte Green ICT Training Kit, DSWD community-service hours, and a letter of recommendation upon completion.</p>
+                        <p class="text-dark"><i class="fa fa-check text-primary me-2"></i> Work alongside youth leaders, barangay officials, DENR staff, and IT mentors from the Davao tech community.</p>
+                        <p class="text-dark"><i class="fa fa-check text-primary me-2"></i> Hybrid roles available — some volunteers work fully online curating educational content or moderating our community forums.</p>
+                        <p class="text-dark mb-5"><i class="fa fa-check text-primary me-2"></i> 100% free to join. We never ask volunteers for donations; we ask for your time, ideas, and passion.</p>
+                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="volunteer.html">Join the Green ICT Movement</a>
                     </div>
                 </div>
             </div>
@@ -840,34 +875,34 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item">
-                            <h4 class="mb-4 text-white">Newsletter</h4>
-                            <p class="mb-4">EcoByte encourages sustainable digital habits, safer internet use, and smarter technology choices for a cleaner future.</p>
-                            <div class="position-relative mx-auto">
-                                <input class="form-control border-0 bg-secondary w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn-hover-bg btn btn-primary position-absolute top-0 end-0 py-2 mt-2 me-2">Sign Up</button>
-                            </div>
+                            <h4 class="mb-4 text-white">Green ICT Newsletter</h4>
+                            <p class="mb-4">Monthly tips, Davao e-waste drop-off alerts, and Filipino-language digital-citizenship guides delivered straight to your inbox. No spam, unsubscribe anytime.</p>
+                            <form action="contact.html" class="position-relative mx-auto" method="get">
+                                <input class="form-control border-0 bg-secondary w-100 py-3 ps-4 pe-5" type="email" required placeholder="Your email address">
+                                <button type="submit" class="btn-hover-bg btn btn-primary position-absolute top-0 end-0 py-2 mt-2 me-2">Subscribe</button>
+                            </form>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Our Services</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Digital Wellness Programs</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> E-Waste Management</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Technology Education</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Protection</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Device Recycling</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Green Computing</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Digital Wellness Programs</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> E-Waste Management</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Technology Education</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Privacy Protection</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Device Recycling</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Green Computing</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Volunteer</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Community Coordinators</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Education Specialists</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Tech Ambassadors</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Outreach Leaders</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Program Facilitators</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Advocacy Partners</a>
+                            <h4 class="mb-4 text-white">Volunteer Roles</h4>
+                            <a href="volunteer.html"><i class="fas fa-angle-right me-2"></i> Community Coordinators</a>
+                            <a href="volunteer.html"><i class="fas fa-angle-right me-2"></i> Education Specialists</a>
+                            <a href="volunteer.html"><i class="fas fa-angle-right me-2"></i> Tech Ambassadors</a>
+                            <a href="volunteer.html"><i class="fas fa-angle-right me-2"></i> Outreach Leaders</a>
+                            <a href="volunteer.html"><i class="fas fa-angle-right me-2"></i> Program Facilitators</a>
+                            <a href="volunteer.html"><i class="fas fa-angle-right me-2"></i> Advocacy Partners</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
@@ -936,7 +971,7 @@
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-4 text-center text-md-start mb-md-0">
-                         <span class="text-body"><a href="#"><i class="fas fa-copyright text-light me-2"></i><span class="text-primary">EcoByte</span></a>, All right reserved.</span>
+                         <span class="text-body"><a href="index.html"><i class="fas fa-copyright text-light me-2"></i><span class="text-primary">EcoByte</span></a>, All rights reserved. 2025</span>
                     </div>
                     <div class="col-md-4 text-center">
                         <div class="d-flex align-items-center justify-content-center">
@@ -973,8 +1008,8 @@
         <script src="lib/lightbox/js/lightbox.min.js"></script>
         
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+         <!-- Template Javascript -->
+         <script src="js/main.js"></script>
 
     </body>
 
